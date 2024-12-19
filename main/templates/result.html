@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mind Map Result</title>
+</head>
+<body>
+    <h1>Mind Map Result</h1>
+    {% if mind_map %}
+        <pre>{{ mind_map }}</pre>
+    {% elif error %}
+        <p style="color: red;">Error: {{ error }}</p>
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>
