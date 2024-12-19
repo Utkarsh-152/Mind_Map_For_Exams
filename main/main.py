@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import requests
+import markdown
 
 app = Flask(__name__)
 
@@ -21,7 +22,9 @@ def generate_mind_map():
 
     if response.status_code == 200:
         mind_map = response.json().get('mind_map')
-        return render_template('result.html', mind_map=mind_map)
+        # Convert the mind map to markdown format
+        mind_map_markdown = markdown.markdown(mind_map)
+        return render_template('result.html', mind_map=mind_map_markdown)
     else:
         error = response.json().get('error', 'An error occurred')
         return render_template('result.html', error=error)

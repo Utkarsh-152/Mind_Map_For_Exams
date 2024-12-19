@@ -1,16 +1,81 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-h1 {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
     color: #333;
+    margin: 0;
+    padding: 20px;
 }
 
+/* Header Styles */
+h1 {
+    color: #4A90E2;
+    text-align: center;
+}
+
+/* Form Styles */
 form {
-    margin: 20px 0;
+    max-width: 400px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
     font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Mind Map Result Styles */
+.mind-map {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    white-space: pre-wrap; /* Ensures line breaks are displayed */
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* Link Styles */
+a {
+    color: #4A90E2;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
 }

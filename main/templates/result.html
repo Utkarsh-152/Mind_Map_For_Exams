@@ -2,13 +2,16 @@
 <html>
 <head>
     <title>Mind Map Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Mind Map Result</h1>
     {% if mind_map %}
-        <pre>{{ mind_map }}</pre>
+        <div class="mind-map">
+            {{ mind_map|safe }}
+        </div>
     {% elif error %}
-        <p style="color: red;">Error: {{ error }}</p>
+        <p class="error">Error: {{ error }}</p>
     {% endif %}
     <a href="/">Back</a>
 </body>
