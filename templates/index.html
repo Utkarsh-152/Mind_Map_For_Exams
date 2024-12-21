@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mind Map Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Mind Map</title>
 </head>
 <body>
-    <h1>Mind Map Generator</h1>
-    <form action="/generate_mind_map" method="post">
+    <h1>Generate Mind Map</h1>
+    <form action="{{ url_for('web_generate_mind_map') }}" method="POST">
         <label for="standard">Standard:</label>
         <input type="text" id="standard" name="standard" required><br><br>
 
@@ -16,7 +17,7 @@
         <label for="chapter">Chapter:</label>
         <input type="text" id="chapter" name="chapter" required><br><br>
 
-        <button type="submit">Generate</button>
+        <button type="submit">Generate Mind Map</button>
     </form>
 </body>
 </html>

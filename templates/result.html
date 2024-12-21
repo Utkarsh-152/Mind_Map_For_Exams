@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .heading {
+            font-weight: bold;
+        }
+        .subheading {
+            margin-left: 15px;
+        }
+        .important-points, .formulas, .short-notes {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mind Map Result</h1>
+    {% if mind_map %}
+        <div class="mind-map">
+            {{ mind_map|safe }}  <!-- This will render the HTML mind map generated from markdown -->
+        </div>
+    {% elif error %}
+        <p class="error">Error: {{ error }}</p>
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>
